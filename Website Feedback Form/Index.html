@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Feedback Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Website Feedback Form</h1>
+	</header>
+	<form id="feedbackForm">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<br>
+
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required>
+		<br>
+
+		<label for="age">Age:</label>
+		<select id="age" name="age">
+			<option value="18-24">18-24</option>
+			<option value="25-34">25-34</option>
+			<option value="35-44">35-44</option>
+			<option value="45-54">45-54</option>
+			<option value="55+">55+</option>
+		</select>
+		<br>
+
+		<label for="gender">Gender:</label>
+		<label><input type="radio" name="gender" value="male">Male</label>
+		<label><input type="radio" name="gender" value="female">Female</label>
+		<label><input type="radio" name="gender" value="nonbinary">Non-binary</label>
+		<br>
+
+		<label for="rating">Rate our website's user interface:</label>
+		<input type="range" id="rating" name="rating" min="1" max="10" required>
+		<br>
+
+		<label for="feedback">Feedback:</label>
+		<textarea id="feedback" name="feedback" required></textarea>
+		<br>
+
+		<label>Did you experience any technical issues?</label>
+		<label><input type="checkbox" name="techIssue" value="login">Login issues</label>
+		<label><input type="checkbox" name="techIssue" value="payment">Payment issues</label>
+		<label><input type="checkbox" name="techIssue" value="other">Other</label>
+		<br>
+
+		<button type="button" onclick="validateForm()">Submit Feedback</button>
+	</form>
+	<script src="script.js"></script>
+</body>
+</html>
